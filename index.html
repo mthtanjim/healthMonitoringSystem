@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health Monitoring System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="heroSection">
+        <h1>Health Monitoring System</h1>
+        <p class="heroDescription">
+            Your one-stop platform for tracking and improving your health. 
+            Monitor vital parameters, get personalized insights, and achieve your wellness goals.
+        </p> 
+    </div>
+   
+    <div class="navigation-buttons">
+        <button onclick="showSection('helth')">BMI Calculator</button>
+        <button onclick="showSection('bloodPressureSection')">Blood Pressure</button>
+        <button onclick="showSection('dietSection')">Diet Analyzer</button>
+        <button onclick="showSection('exerciseSection')">Exercise Recommender</button>
+    </div>
+    
+    <div id="helth" class="section" >
+        <h2>Calculate Your BMI</h2>
+    <form id="healthForm">
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" name="weight"><br><br>
+
+        <label for="height">Height (cm):</label>
+        <input type="number" id="height" name="height"><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age"><br><br>
+
+        <button type="button" onclick="submitBMI()">Calculate BMI</button>
+    </form>
+
+    <div id="BMIresult" class="result-div"></div>
+</div>
+
+<div id="bloodPressureSection" class="section">
+    <h2>Blood Pressure Tracker</h2>
+    <form id="bloodPressureForm">
+        <label for="systolic">Systolic Pressure (mmHg):</label>
+        <input type="number" id="systolic" name="systolic"><br><br>
+        <label for="diastolic">Diastolic Pressure (mmHg):</label>
+        <input type="number" id="diastolic" name="diastolic"><br><br>
+        <button type="button" onclick="submitBloodPressure()">Calculate</button>
+    </form>
+    <div id="bloodPressureResult"  class="result-div"></div>
+</div>
+
+
+
+<div id="dietSection" class="section">
+    <h2>Diet Analyzer</h2>
+    <form id="dietForm">
+        <label for="calories">Daily Calorie Intake:</label>
+        <input type="number" id="calories" name="calories"><br><br>
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select><br><br> 
+        <button type="button" onclick="submitDiet()">Analyze Diet</button>
+    </form>
+    <div id="dietResult"  class="result-div"></div>
+</div>
+
+<div id="exerciseSection" class="section">
+    <h2>Exercise Recommender</h2>
+    <form id="exerciseForm">
+        <label for="activityLevel">Activity Level:</label>
+        <select id="activityLevel" name="activityLevel">
+            <option value="sedentary">Sedentary</option>
+            <option value="lightly_active">Lightly Active</option>
+            <option value="moderately_active">Moderately Active</option>
+            <option value="very_active">Very Active</option>
+        </select><br><br>
+        <button type="button" onclick="submitExercise()">Recommend Exercise</button>
+    </form>
+    <div id="exerciseResult"  class="result-div"></div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
