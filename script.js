@@ -36,10 +36,13 @@ function submitBloodPressure() {
 }
 
 // Diet Analysis
-function submitDiet() {
+
+function submitDiet(event) {
+    event.preventDefault(); // Prevent default form submission
+
     var calories = document.getElementById("calories").value;
-    var age = document.getElementById("age").value; 
-    var gender = document.getElementById("gender").value; 
+    var age = document.getElementById("age").value;
+    var gender = document.getElementById("gender").value;
 
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "analyze_diet.php", true);

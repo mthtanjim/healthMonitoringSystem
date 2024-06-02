@@ -1,5 +1,8 @@
 <?php
 // Add CORS headers (same as in calculate_bmi.php)
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST");
+header("Access-Control-Allow-Headers: Content-Type");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $systolic = $_POST["systolic"];
